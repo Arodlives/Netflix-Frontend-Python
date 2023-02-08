@@ -1,0 +1,36 @@
+users--> primary table or  table  on the left
+addresses--> 2ndary  table or  the  table  on  the right
+
+SELECT  *  FROM users JOIN addresses ON users.id = addresses.user_id;
+
+if  missing one of the object/table input  
+a user with  no object
+you  use LEFT JOIN
+missing items would  be filled  with  null
+
+
+
+ON= lines up the puzzle pieces
+
+each  row is a dictionary 
+list of dictionaries 
+
+many to many
+Double JOINS 
+remove the plural  (users_id ----> user_id)
+
+JOINING left table  to  middle  table
+
+SELECT  * FROM users JOIN users_has_cars ON users.id=users_has_cars.user_id;
+Step  2:Then
+    JOIN cars ON users_has_cars.cars_id=cars.id;
+
+Step 3: selecting by  id  must  specify which  table  id
+WHERE users.id = 10;
+
+creating  objects  targeting the primary  object in the model file 
+
+current_timestamp()
+current_timestamp() on update current_timestamp()
+
+cursor.execute(query,remove data or this argument)

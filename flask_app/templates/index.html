@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix -Watch TV Shows Online,Watch Movies Online</title>
+    <link rel="shortcut icon" href="static/images/netflix.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"
+</head>
+<body>
+    <!---: First box -->
+    <section class="site-container">
+        <header class="site-header">
+            <div class="brand-container">
+                <svg viewBox="0 0 111 30"  focusable="false"><g><path d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z" fill="#e50914"></path></g></svg>
+            </div>
+            <a href="#">Sign In</a>
+        </header>
+    </section>
+    <section class="banner">
+        <img src="static/images/Us.jpg" alt="Site Banner" class="our-story-card-background">
+        <div class="our-story-card-text">
+            <div class="heading">
+                <h2>Unlimited movies, TV shows, and more.</h2>
+                <h5>Watch anywhere. Cancel anytime.</h5>
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <form action="/signup/registration"  method="post" class="global-search">
+                    <!--if  user in  session  instead  of getstarted go  back  to  Finish Sign Up-->
+                    <input type="text" class="form__input" autocomplete="off" id="email" placeholder="Email address">
+                    <button type="button">Get Started</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!---: story card  1 -->
+    <section class="our-story-cards">
+        <div class="our-story-card-text">
+            <h1 class="our-story-card-title">Enjoy on your TV</h1>
+            <h2 class="our-story-card-subtitle">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blue-ray players, and more.</h2>
+        </div>
+        <div class="our-story-card-img-container">
+            <div class="our-story-card-animation-container">
+                <img src="static/images/tv.png" alt="" class="our-story-card-img" style="z-index:100;"">
+                <div class="our-story-card-animation">
+    <video class="our-story-card-video" playsinline muted  loop  autoplay>
+                        <source src="static/videos/netflix_ui.m4v" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---: story card 2 -->
+    <section class="our-story-cards downloadAndWatch">
+        <div class="our-story-card-img-container">
+            <div class="our-story-card-animation-container">
+                <img src="static/images/mobile-image.jpg" alt="" class="our-story-card-img">
+                <div class="our-story-card-animation">
+                    <div class="our-story-animation-image">
+                        <img src="static/images/boxshot.png" alt=""  height="70px">
+                    </div>
+                
+                    <div class="our-story-card-animation-text">
+                        <div class="text-0">Stranger Things</div>
+                        <div  class="text-1">Downloading</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="our-story-card-text">
+            <h1 class="our-story-card-title">Download your shows to watch offline.</h1>
+            <h2 class="our-story-card-subtitle">Save your favorites easily and always have something to watch.</h2>
+        </div>
+    </section>
+    <!---: story card 3 -->
+    <section class="our-story-cards">
+        <div class="our-story-card-text">
+            <h1 class="our-story-card-title">Watch everywhere.</h1>
+            <h2 class="our-story-card-subtitle">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h2>
+        </div>
+        <div class="our-story-card-img-container">
+            <div class="our-story-card-animation-container">
+                <img src="static/images/tv1.png" alt="" class="our-story-card-img" style="z-index:100 ;">
+                <div class="our-story-card-animation">
+    <video class="our-story-card-video1" playsinline muted  loop  autoplay>
+                        <source src="static/videos/vid1.m4v" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---: story  card 4 -->
+    <section class="our-story-cards">
+        <div class="our-story-card-img-container">
+            <div class="our-story-card-animation-container">
+                <img src="static/images/kids.png" alt="" class="our-story-card-img">
+            </div>
+        </div>
+        <div class="our-story-card-text">
+            <h1 class="our-story-card-title">Create profiles for kids</h1>
+            <h2 class="our-story-card-subtitle">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</h2>
+        </div>
+    </section>
+    <!---: story card  5 faq -->
+    <section class="our-story-cardsone">
+    <div  class="faq col-6">
+        <h1>Frequently Asked Questions</h1>
+        <!---: start of accordion -->
+        <div class="accordion accordion-flush w-100" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"  style="background-color:gray; color:white;">
+                  What is Netflix?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"style="background-color:gray; color:white;">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"style="background-color:gray; color:white;">
+                  How much does Netflix cost?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"style="background-color:gray; color:white;">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"style="background-color:gray; color:white;">
+                  Where can i watch?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"style="background-color:gray; color:white;">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour"style="background-color:gray; color:white;">
+                    How do i cancel?
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample" style="background-color:gray; color:white;" >
+                  <div class="accordion-body"style="background-color:gray; color:white;">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                </div>
+              </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"style="background-color:gray; color:white;">
+                  What can i watch on Netflix?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"style="background-color:gray; color:white;">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"style="background-color:gray; color:white;">
+                  Is Netflix good for kids?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body"style="background-color:gray; color:white;">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+              </div>
+            </div>
+          </div>
+    </div>
+        <!---: end  of accordion -->
+        <section class="banner">
+        <div class="our-story-card-text">
+            <div class="heading">
+                <p>Ready to watch? Enter your email to create or restart your membership.</p>
+                <form action="/signup/registration" method="post" class="global-search">
+                    <input type="text" class="form__input" autocomplete="On" id="email" placeholder="Email address">
+                    <button type="button">Get Started</button>
+                </form>
+            </div>
+        </div>
+        </section>
+    </section>
+    <!---: Footer -->
+    <section class="our-story-cardsone">
+    <footer>
+        <div  class="footertop">
+        <p>Questions? Call 1-844-505-2993</p>
+        </div>
+        <br>
+        <div  class="list">
+            <ul>
+                <li class="footer-link-item"><a href="/faq" class="footerlist">FAQ</a></li>
+                <li class="footer-link-item" ><a href="/Investor_relations" class="footerlist">Investor Relations</a></li>
+                <li class="footer-link-item" ><a href="/waystowatch" class="footerlist">Ways to Watch</a></li>
+                <li class="footer-link-item" ><a href="/Corporate_information" class="footerlist">Corporate Information</a></li>
+                <li class="footer-link-item"  ><a href="/Only_on_netlfix" class="footerlist">Only on Netlfix</a></li>
+            </ul> 
+        </div>
+        <div class="list">
+            <ul>
+                <li class="footer-link-item" ><a href="/help_center" class="footerlist">Help Center</a></li>
+                <li class="footer-link-item"><a href="/Investor_relations" class="footerlist">Jobs</a></li>
+                <li class="footer-link-item"><a href="/waystowatch" class="footerlist">Terms of Use</a></li>
+                <li class="footer-link-item" ><a href="/Corporate_information" class="footerlist">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+                <li class="footer-link-item" ><a href="/help_center" class="footerlist">Help Center</a></li>
+                <li class="footer-link-item" ><a href="/Investor_relations" class="footerlist">Jobs</a></li>
+                <li class="footer-link-item" ><a href="/waystowatch" class="footerlist">Terms of Use</a></li>
+                <li class="footer-link-item" ><a href="/Corporate_information" class="footerlist">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+                <li  class="footer-link-item"><a href="/Account" class="footerlist">Account</a></li>
+                <li  class="footer-link-item"><a href="/Redeem_Gift_Cards" class="footerlist">Redeem Gift Cards</a></li>
+                <li  class="footer-link-item"><a href="/Privacy" class="footerlist">Privacy</a></li>
+                <li class="footer-link-item" ><a href="/Speed_Test" class="footerlist">Speed Test</a></li>
+            </ul>
+        </div>
+        <div class="list">
+            <ul>
+                <li class="footer-link-item" ><a href="/Media_center" class="footerlist">Media Center</a></li>
+                <li class="footer-link-item" ><a href="/Buy_gift_cards" class="footerlist">Buy Gift Cards</a></li>
+                <li class="footer-link-item" ><a href="/Cookie_preferences" class="footerlist">Cookie Preferences</a></li>
+                <li class="footer-link-item" ><a href="/Legal_notice" class="footerlist">Legal Notice</a></li>
+            </ul>
+        </div>
+        <!---: Dropdownlanguage -->
+        <div class="dropdownlanguage">
+            <select name="languages" id="languages">
+                <option value="English">English</option>
+                <option value="Español">Español</option>
+            </select>
+        </div>
+    </footer>
+    <section>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
